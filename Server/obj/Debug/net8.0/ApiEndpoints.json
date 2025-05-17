@@ -1,0 +1,187 @@
+[
+  {
+    "ContainingType": "Server.Controllers.AddressController",
+    "Method": "CreateAndGetAddressId",
+    "RelativePath": "api/Address/CreateAndGetAddressId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "Dal.models.Address",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientController",
+    "Method": "GetAvailableAppointments",
+    "RelativePath": "api/Client/FilterAvailableAppointmentsBySpecialty",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specialty",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientController",
+    "Method": "Login",
+    "RelativePath": "api/Client/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "BL.Models.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientController",
+    "Method": "GetAppointmentsForClient",
+    "RelativePath": "api/Client/myAppointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Age",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeftEyeNumber",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "RightEyeNumber",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cylinder",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BackgroundDiseases",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "HealthInsurance",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address.City",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address.Street",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address.HouseNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address.Clients",
+        "Type": "System.Collections.Generic.ICollection\u00601[[Dal.models.Client, Dal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address.Doctors",
+        "Type": "System.Collections.Generic.ICollection\u00601[[Dal.models.Doctor, Dal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Appointments",
+        "Type": "System.Collections.Generic.ICollection\u00601[[Dal.models.Appointment, Dal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BL.Models.ViewingQueues, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.ClientController",
+    "Method": "SignUp",
+    "RelativePath": "api/Client/SignUp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "Dal.models.Client",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

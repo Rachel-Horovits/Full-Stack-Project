@@ -1,0 +1,16 @@
+﻿using BL.Models;
+using Dal.models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BL.Api;
+public interface IBLClient
+{
+    public void SignUp(Client emp);
+    public Client? Login(string username, string id);
+    public List<ViewingQueues> GetAppointmentsForClient(Client client);
+}
+    
