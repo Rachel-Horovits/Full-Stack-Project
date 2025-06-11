@@ -13,7 +13,6 @@ A full-stack management system for an eye clinic, built with ASP.NET Core (.NET 
 - [Main Features](#main-features)
 - [Security](#security)
 - [Contributing](#contributing)
-- [Authors](#authors)
 
 ---
 
