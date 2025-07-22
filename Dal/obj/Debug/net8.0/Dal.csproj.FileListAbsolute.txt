@@ -116,3 +116,18 @@ D:\Users\User\Desktop\גרסא אחרונה\2\Dal\obj\Debug\net8.0\refint\Dal.dl
 D:\Users\User\Desktop\גרסא אחרונה\2\Dal\obj\Debug\net8.0\Dal.pdb
 D:\Users\User\Desktop\גרסא אחרונה\2\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
 D:\Users\User\Desktop\גרסא אחרונה\2\Dal\obj\Debug\net8.0\ref\Dal.dll
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\bin\Debug\net8.0\Dal.deps.json
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\bin\Debug\net8.0\Dal.dll
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\bin\Debug\net8.0\Dal.pdb
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.dll
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\refint\Dal.dll
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.pdb
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Dal\obj\Debug\net8.0\ref\Dal.dll

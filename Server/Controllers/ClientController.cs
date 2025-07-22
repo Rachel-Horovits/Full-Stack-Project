@@ -1,10 +1,13 @@
 ﻿using BL.Api;
 using BL.Models;
-using Dal.Api;
 using Dal.models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Server.models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 namespace Server.Controllers
 {
     [Route("api/[controller]")]
@@ -12,21 +15,21 @@ namespace Server.Controllers
 
     public class ClientController : ControllerBase
     {
-        IBLClient client;
-
-        public ClientController(IBLManager bl) {
+        private readonly IBLClient client;
+        private readonly IConfiguration _config;
+        public ClientController(IBLManager bl, IConfiguration config)
+        {
             client = bl.BLClient;
-
+            _config = config;
         }
-
-
+        [Authorize]
         [HttpGet]
         [Route("myAppointments")]
-        public ActionResult<List<ViewingQueues>> GetAppointmentsForClient([FromQuery] Client clientId) // שינוי לקבלת פרמטר מהשאילתא
+        public ActionResult<List<ViewingQueues>> GetAppointmentsForClient([FromQuery] Client client) 
         {
             try
             {
-                var appointments = client.GetAppointmentsForClient(clientId);
+                var appointments = this.client.GetAppointmentsForClient(client);
                 if (appointments == null || !appointments.Any())
                 {
                     return NotFound("No appointments found for the specified client.");
@@ -51,10 +54,25 @@ namespace Server.Controllers
                     return Unauthorized("Invalid credentials.");
                 }
 
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"])); 
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-                var token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+                var claims = new[]
+                {
+                    new Claim(JwtRegisteredClaimNames.Sub, clientData.Id),
+                    new Claim(JwtRegisteredClaimNames.UniqueName, clientData.Name),
+                };
 
-                return Ok(new LoginResponse { Client = clientData, Token = token });
+                var token = new JwtSecurityToken(
+                    issuer: _config["Jwt:issuer"],
+                    audience: _config["Jwt:audience"],
+                    claims: claims,
+                    expires: DateTime.Now.AddHours(2),
+                    signingCredentials: creds);
+
+                var tokenJwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+                return Ok(new LoginResponse { Client = clientData, Token = tokenJwt });
             }
             catch (Exception ex)
             {
