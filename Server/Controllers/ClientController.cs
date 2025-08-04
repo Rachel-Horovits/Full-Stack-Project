@@ -94,7 +94,7 @@ namespace Server.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
             }
         }
-
+        [Authorize]
         [HttpGet("FilterAvailableAppointmentsBySpecialty")]
         public IActionResult GetAvailableAppointments(string specialty)
         {

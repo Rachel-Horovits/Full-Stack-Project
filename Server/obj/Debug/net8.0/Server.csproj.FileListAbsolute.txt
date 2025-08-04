@@ -792,3 +792,4 @@ D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Server\o
 D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Server\obj\Debug\net8.0\Server.pdb
 D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
 D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Server\obj\Debug\net8.0\ref\Server.dll
+D:\Users\User\Desktop\פרויקט FULL STACK גיט\Full-Stack-Project\Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
